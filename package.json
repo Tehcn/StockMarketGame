@@ -1,0 +1,26 @@
+{
+  "name": "@tehcn/stockmarketgame",
+  "version": "0.1.0",
+  "description": "Free simulated stock market",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tehcn/StockMarketGame.git"
+  },
+  "keywords": [
+    "stocks",
+    "game"
+  ],
+  "author": "Noah Perry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tehcn/StockMarketGame/issues"
+  },
+  "homepage": "https://github.com/Tehcn/StockMarketGame#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
