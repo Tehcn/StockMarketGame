@@ -4,3 +4,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 let page = params.page;
+
+(async () => {
+
+})();
