@@ -6,7 +6,13 @@ const view = { root: __dirname+"/views" }
 app.use('/static', express.static(__dirname+"/static"));
 
 app.get('/', (_req, res) => {
-	res.sendFile('index.html', view);
+	res.sendFile('index.html', { root: __dirname });
 });
 
-app.listen(process.env.PORT || 3000, () => console.log(`app started at ${Date.now()}`));
+app.get('/views', (req, res) => {
+	let page = req.query.page;
+	res.sendFile(`${page}.html`, view);
+});
+
+let port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`app started at ${Date.now()} on http://localhost:${port}`));

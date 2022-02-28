@@ -6,5 +6,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 let page = params.page;
 
 (async () => {
-
+	if(page == null || page == '') page = 'home';
+	document.getElementById('root').innerHTML = await (await fetch(`/views?page=${page}`)).text();
 })();
